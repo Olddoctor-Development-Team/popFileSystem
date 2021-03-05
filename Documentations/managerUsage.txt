@@ -1,0 +1,8 @@
+usage: popfilesystem [options]
+
+options:
+--start-daemon      -s: Start popFilesystem daemon.
+--kill-daemon       -k: Kill popFilesystem daemon.
+--restart-daemon    -r: Restart popFilesystem daemon.
+--help              -h,-?: Print help.
+--license           : Print license.
