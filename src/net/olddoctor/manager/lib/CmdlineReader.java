@@ -38,11 +38,11 @@ public class CmdlineReader {
                         }
 
                         case "kill-daemon" -> {
-
+                            return RunnableList.killDaemon;
                         }
 
                         case "restart-daemon" -> {
-
+                            return RunnableList.restartDaemon;
                         }
 
                         case "help" -> {
