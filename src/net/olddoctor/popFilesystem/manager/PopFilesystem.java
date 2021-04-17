@@ -19,12 +19,12 @@
 
 //PopFilesystem: 程序入口
 
-package net.olddoctor.manager;
+package net.olddoctor.popFilesystem.manager;
 
-import net.olddoctor.manager.lib.CmdlineReader;
-import net.olddoctor.manager.lib.Helper;
-import net.olddoctor.manager.lib.NoArgumentException;
-import net.olddoctor.manager.lib.UnknownArgumentException;
+import net.olddoctor.popFilesystem.manager.lib.CmdlineReader;
+import net.olddoctor.popFilesystem.manager.lib.Helper;
+import net.olddoctor.popFilesystem.manager.lib.NoArgumentException;
+import net.olddoctor.popFilesystem.manager.lib.UnknownArgumentException;
 
 public class PopFilesystem {
     public static final boolean debugging = true;

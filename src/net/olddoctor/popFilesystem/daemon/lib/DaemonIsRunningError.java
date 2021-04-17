@@ -1,4 +1,4 @@
-package net.olddoctor.daemon.lib;
+package net.olddoctor.popFilesystem.daemon.lib;
 
 public class DaemonIsRunningError extends Error {
     public DaemonIsRunningError() {
