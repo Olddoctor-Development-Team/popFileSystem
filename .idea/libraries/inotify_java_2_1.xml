@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="inotify-java-2.1">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/thirdPart/lib/inotify-java-2.1.jar!/" />
+    </SOURCES>
+  </library>
+</component>

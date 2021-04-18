@@ -7,7 +7,6 @@ import net.olddoctor.popFilesystem.daemon.lib.NoConfigFileError;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Daemon {
@@ -30,7 +29,7 @@ public class Daemon {
             BufferedReader configReader = new BufferedReader(new FileReader(configFile));
 
             String line;
-            Map<String, String> config = new HashMap();
+            Map<String, String> config = new HashMap<>();
             while ((line = configReader.readLine()) != null) {
                 if (!(line.equals("") || line.charAt(0) == '#')) {
                     String[] split = line.split("=", 2);
