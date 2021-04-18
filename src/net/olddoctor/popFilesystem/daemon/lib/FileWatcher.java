@@ -1,14 +1,15 @@
 package net.olddoctor.popFilesystem.daemon.lib;
 
 import java.util.HashMap;
-import java.util.Map;
+import java.util.Stack;
 
 public class FileWatcher {
     static {
         System.loadLibrary("libfilewatcher");
     }
 
-    private Map<String, Integer> wdList = new HashMap();
+    private final HashMap<String, Integer> wdList = new HashMap<>();
+    private final Stack<String> events = new Stack<>();
 
     private final int watcher;
 
@@ -33,8 +34,16 @@ public class FileWatcher {
             throw new FileWatcherException("removing new folder" + folder, errCode);
     }
 
-    public int getEvent() {
-        return getEventNative(this.watcher);
+    public String getEvent() {
+        //获取Events
+        String[] events = getEventNative(this.watcher);
+
+        //若有新的Event
+        if (events.length > 0)
+            //读取Event并压入栈
+            for (String event : events) this.events.push(event);
+
+        return this.events.pop();
     }
 
     private native int createFileWatcherNative();
@@ -43,7 +52,7 @@ public class FileWatcher {
 
     private native int rmFolderNative(int fd, int watcher);
 
-    private native int getEventNative(int watcher);
+    private native String[] getEventNative(int watcher);
 }
 
 class FileWatcherError extends Error {

@@ -26,7 +26,7 @@ JNIEXPORT jint JNICALL Java_net_olddoctor_popFilesystem_daemon_lib_FileWatcher_r
 }
 
 JNIEXPORT jint JNICALL Java_net_olddoctor_popFilesystem_daemon_lib_FileWatcher_getEventNative
-  (JNIEnv *, jobject, jint watcher) {
+  (JNIEnv *env, jobject, jint watcher) {
     
 
 }
