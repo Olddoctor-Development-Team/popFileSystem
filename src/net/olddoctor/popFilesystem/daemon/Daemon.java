@@ -29,7 +29,7 @@ public class Daemon {
             BufferedReader configReader = new BufferedReader(new FileReader(configFile));
 
             String line;
-            Map<String, String> config = new HashMap();
+            Map<String, String> config = new HashMap<>();
             while ((line = configReader.readLine()) != null) {
                 if (!(line.equals("") || line.charAt(0) == '#')) {
                     String[] split = line.split("=", 2);
